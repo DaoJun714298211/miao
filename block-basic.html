@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>block-basic</title>
+
+  <style>
+    div#a {
+      background-color: red;
+    }
+
+    p#a {
+      width: 600px;
+      margin: auto;
+    }
+
+    body {
+      margin: 20px;
+    }
+
+    div#b {
+      width: 600px;
+      border: solid;
+      margin: 20px auto 20px;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+
+    div#c {
+      background-color: violet;
+      height: 50px;
+    }
+
+    p:not(p#a) {
+      height: 4em;
+      overflow: auto;
+    }
+
+    div#c:hover {
+      margin-left: -10px;
+      margin-right: -10px;
+    }
+
+    div#d {
+      border: 50px solid;
+      border-color: transparent transparent orange transparent;
+      width: 0;
+      margin: auto;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="a">
+    <p id="a">
+      aaaaa
+    </p>
+  </div>
+  <div id="b">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae, deserunt. Ab ipsa consequuntur, assumenda
+      tempore voluptates expedita modi dolore cupiditate, eum quia repellendus atque laborum cum blanditiis perspiciatis
+      numquam illo?
+    </p>
+    <div id="c"></div>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia atque corrupti alias voluptate in repudiandae
+      repellendus nemo. Obcaecati aspernatur sunt doloremque natus rem aliquid! Molestiae iste tempora ipsa neque sed.
+    </p>
+  </div>
+  <div id="d"></div>
+
+</body>
+
+</html>
