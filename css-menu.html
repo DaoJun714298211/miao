@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css-menu</title>
+  <style>
+    ul {
+      background-color: thistle;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li:hover {
+      background-color: tomato;
+    }
+
+    .list li {
+      white-space: nowrap;
+      position: relative;
+    }
+
+    .list>li {
+      display: inline-block;
+    }
+
+    .list ul {
+      display: none;
+      position: absolute;
+    }
+
+    li:hover>ul {
+      display: block;
+    }
+
+    ul ul ul {
+      top: 0;
+      left: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="list">
+    <li>
+      文件
+      <ul>
+        <li>新建文件</li>
+        <li>打开文件
+          <ul>
+            <li>11111111111111111111111111111111111111111111111</li>
+            <li>22222222222222222222222222222222222222222222222</li>
+            <li>33333333333333333333333333333333333333333333333</li>
+          </ul>
+        </li>
+        <li>保存文件</li>
+      </ul>
+    </li>
+    <li>
+      编辑
+      <ul>
+        <li>剪切</li>
+        <li>复制</li>
+        <li>粘贴</li>
+      </ul>
+    </li>
+    <li>
+      选择
+      <ul>
+        <li>全选</li>
+        <li>扩大选区</li>
+        <li>缩小选区</li>
+      </ul>
+    </li>
+  </ul>
+</body>
+
+</html>
