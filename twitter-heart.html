@@ -8,31 +8,29 @@
   <title>twitter-heart</title>
   <!-- <meta http-equiv="refresh" content="1"> -->
   <style>
-    div {
+    label {
+      display: inline-block;
       margin: auto;
       height: 100px;
       width: 100px;
       border: solid;
       position: relative;
       overflow: hidden;
+      background-image: url(./web_heart_animation.png);
+      background-position:0 0;
+      transition:none;
     }
 
-    img {
-      position: absolute;
-      left: 0;
+    input:checked + label {
+      background-position: -2800px 0;
       transition: 1s steps(28);
-    }
-
-    img:hover {
-      left: -2800px;
     }
   </style>
 </head>
 
 <body>
-  <div>
-    <img src="./web_heart_animation.png" alt="">
-  </div>
+  <input type="checkbox" name="" id="heart" hidden>
+  <label for="heart"></label>
 </body>
 
 </html>
