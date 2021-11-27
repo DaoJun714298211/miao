@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9-grid</title>
+    <style>
+      /* * {
+      background-color: #rgba(0,0,0.08);
+      box-shadow:inset 0 0 1px red;
+    } */
+
+      /* 单元格 */
+      table {
+        border-collapse: collapse;
+      }
+
+      tr,
+      col {
+        border: 5px solid blue;
+      }
+
+      td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        padding: 0;
+      }
+
+      td:hover {
+        border: 5px solid red;
+      }
+
+      /* 列表浮动 */
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 170px;
+        display: flow-root;
+        text-align: center;
+        padding-bottom: 5px;
+        overflow: hidden;
+      }
+
+      li {
+        width: 50px;
+        height: 50px;
+        border: 5px solid blue;
+        float: left;
+        margin-bottom: -5px;
+        margin-right: -5px;
+      }
+
+      li:hover {
+        border-color: red;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 单元格 -->
+    <table>
+      <col />
+      <col />
+      <col />
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <!-- 列表浮动 -->
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+      <li>6</li>
+      <li>7</li>
+      <li>8</li>
+      <li>9</li>
+    </ul>
+  </body>
+</html>
