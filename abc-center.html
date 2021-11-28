@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>abc-center</title>
+
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        border: 1px solid #000;
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+      }
+
+      .a {
+        position: relative;
+        box-sizing: border-box;
+      }
+
+      #a {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .b {
+        line-height: 200px;
+        text-align: center;
+        font-size: 0;
+      }
+
+      #b {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      .c {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <img
+        id="a"
+        src="https://img0.baidu.com/it/u=847498377,1310873641&fm=26&fmt=auto"
+        alt=""
+      />
+    </div>
+    <div class="b">
+      <img
+        id="b"
+        src="https://img1.baidu.com/it/u=3789614635,66400153&fm=26&fmt=auto"
+        alt=""
+      />
+    </div>
+    <div class="c">
+      <img id="c" src="https://ys.mihoyo.com/favicon.ico" alt="" />
+    </div>
+  </body>
+</html>
