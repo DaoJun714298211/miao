@@ -12,13 +12,17 @@
         box-shadow: inset 0 0 1px red;
       }
 
-      html {
-        height: 100%;
-      }
-
+      html,
       body {
         height: 100%;
         margin: 0;
+      }
+
+      div {
+        height: 100%;
+        display: flex;
+        flex-flow: wrap;
+        align-content: flex-start;
       }
 
       ul {
@@ -28,30 +32,26 @@
 
       header {
         height: 100px;
-        background-color: cadetblue;
-      }
-
-      .main {
-        display: flex;
-        height: calc(100% - 100px);
+        width: 100%;
       }
 
       aside {
         width: 200px;
-        overflow: auto;
-        background-color: pink;
-        flex-basis: auto;
-        flex-shrink: 0;
+        overflow-y: scroll;
+        height: calc(100% - 100px);
       }
 
       main {
+        height: calc(100% -100px);
+        width: 0;
+        flex-grow: 1;
         overflow: auto;
       }
     </style>
   </head>
   <body>
-    <header>qq-mail</header>
-    <div class="main">
+    <div>
+      <header>qq-mail</header>
       <aside>
         <ul>
           <li>01</li>
