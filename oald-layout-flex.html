@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oald-layout-flex</title>
+
+    <style>
+      * {
+        background-color: rgba(0, 0, 0, 0.08);
+        box-shadow: inset 0 0 1px red;
+      }
+
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+      }
+
+      div {
+        height: 100%;
+        display: flex;
+        flex-flow: column wrap;
+      }
+
+      aside {
+        width: 200px;
+        height: 100%;
+        overflow: auto;
+      }
+
+      header {
+        height: 72px;
+        width: calc(100% - 600px);
+        overflow: auto;
+      }
+
+      main {
+        height: 0;
+        width: calc(100% - 600px);
+        flex-grow: 1;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <aside>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. A, sit? Velit
+        veniam aut vel est nemo. Ducimus nulla autem, iste nemo, sit, quod
+        molestias id porro in corporis voluptas maxime.
+      </aside>
+      <header>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, fugiat,
+        voluptates deserunt laborum eaque ratione aspernatur doloribus
+        praesentium consectetur accusantium reiciendis provident. Ipsum
+        perspiciatis consequatur iure qui! Libero, dolorem reprehenderit!
+      </header>
+      <main>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad et
+        voluptate aut ipsam reprehenderit id molestias, quidem, voluptates sequi
+        praesentium autem. Repellendus soluta voluptatibus eum consequatur quae
+        rem ducimus alias.
+      </main>
+      <aside>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere odio
+        officiis ab blanditiis porro ipsa laboriosam? At doloribus nisi quasi,
+        fuga delectus ducimus. Pariatur accusamus, deleniti commodi unde maxime
+        quaerat!
+      </aside>
+      <aside>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+        minima, eligendi, magni veniam qui molestiae excepturi ab repellat eos
+        corporis exercitationem ratione amet tenetur, assumenda necessitatibus
+        quis cum inventore? Quam?
+      </aside>
+    </div>
+  </body>
+</html>
