@@ -266,11 +266,13 @@
 
 <script id="ch0104/12">
   var n = Number(prompt("n:", ""));
-  if (n / 1.2 > n / 3 + 50) {
+  var walk = n / 1.2;
+  var bike = n / 3 + 50;
+  if (walk > bike) {
     console.log("BIKE");
-  } else if (n / 1.2 < n / 3 + 50) {
+  } else if (walk < bike) {
     console.log("WALK");
-  } else {
+  } else if (walk == bike) {
     console.log("ALL");
   }
 </script>
