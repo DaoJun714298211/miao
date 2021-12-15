@@ -322,10 +322,10 @@
 </script>
 
 <script id="ch0104/16">
-  var a = prompt("a:", "");
-  var b = prompt("b:", "");
-  var c = prompt("c:", "");
-  if (a < b + c && a > b - c && a > c - b) {
+  var a = Number(prompt("a:", ""));
+  var b = Number(prompt("b:", ""));
+  var c = Number(prompt("c:", ""));
+  if (a < b + c && b < a + c && c < a + b) {
     console.log("yes");
   } else {
     console.log("no");
