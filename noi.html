@@ -269,21 +269,68 @@
   var walk = n / 1.2;
   var bike = n / 3 + 50;
   if (walk > bike) {
-    console.log("BIKE");
+    console.log("Bike");
   } else if (walk == bike) {
-    console.log("ALL");
+    console.log("All");
   } else if (walk < bike) {
-    console.log("WALK");
+    console.log("Walk");
   }
 </script>
 
-<script id="ch0104/13"></script>
+<script id="ch0104/13">
+  var n = Number(prompt("n:", ""));
+  if (n >= 0 && n < 5) {
+    console.log((-n + 2.5).toFixed(3));
+  } else if (n >= 5 && n < 10) {
+    console.log((2 - 1.5 * (n - 3) * (n - 3)).toFixed(3));
+  } else if (n >= 10 && n < 20) {
+    console.log((n / 2 - 1.5).toFixed(3));
+  }
+</script>
 
-<script id="ch0104/14"></script>
+<script id="ch0104/14">
+  var g = prompt("g:", "");
+  var w = prompt("w:", "");
+  var j = Math.ceil((g - 1000) / 500);
+  if (w == "y") {
+    if (g <= 1000) {
+      console.log(8 + 5);
+    } else if (g > 1000) {
+      console.log(8 + 5 + j * 4);
+    }
+  }
+  if (w == "n") {
+    if (g <= 1000) {
+      console.log(8);
+    } else if (g > 1000) {
+      console.log(8 + j * 4);
+    }
+  }
+</script>
 
-<script id="ch0104/15"></script>
+<script id="ch0104/15">
+  var a = prompt("a:", "");
+  var b = prompt("b:", "");
+  var c = prompt("c:", "");
+  if (a > b && a > c) {
+    console.log(a);
+  } else if (b > a && b > c) {
+    console.log(b);
+  } else {
+    console.log(c);
+  }
+</script>
 
-<script id="ch0104/16"></script>
+<script id="ch0104/16">
+  var a = prompt("a:", "");
+  var b = prompt("b:", "");
+  var c = prompt("c:", "");
+  if (a < b + c && a > b - c && a > c - b) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+</script>
 
 <script id="ch0104/17"></script>
 
