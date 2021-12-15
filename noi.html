@@ -332,9 +332,24 @@
   }
 </script>
 
-<script id="ch0104/17"></script>
+<script id="ch0104/17">
+  var y = Number(prompt("y:", ""));
+  if ((y % 4 == 0 && y % 100 != 0) || y % 400 == 0) {
+    console.log("Y");
+  } else {
+    console.log("N");
+  }
+</script>
 
-<script id="ch0104/18"></script>
+<script id="ch0104/18">
+  var x = Number(prompt("x:", ""));
+  var y = Number(prompt("y:", ""));
+  if (x <= 1 && x >= -1 && y >= -1 && y <= 1) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
+</script>
 
 <script id="ch0104/19"></script>
 
