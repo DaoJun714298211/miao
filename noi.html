@@ -265,12 +265,10 @@
 </script>
 
 <script id="ch0104/12">
-  var n = prompt("n:", "");
-  var walk = n / 1.2;
-  var bike = n / 3 + 27 + 23;
-  if (walk > bike) {
+  var n = Number(prompt("n:", ""));
+  if (n / 1.2 > n / 3 + 50) {
     console.log("BIKE");
-  } else if (walk < bike) {
+  } else if (n / 1.2 < n / 3 + 50) {
     console.log("WALK");
   } else {
     console.log("ALL");
