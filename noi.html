@@ -351,9 +351,56 @@
   }
 </script>
 
-<script id="ch0104/19"></script>
+<script id="ch0104/19">
+  var a = Number(prompt("a:", ""));
+  var b = Number(prompt("b:", ""));
+  var c = prompt("c:", "");
+  if (b == 0 && c == "/") {
+    console.log("Divided by zero!");
+  } else if (c != "+" && c != "-" && c != "*" && c != "/") {
+    console.log("Invalid operator!");
+  } else {
+    if (c == "+") {
+      console.log(a + b);
+    }
+    if (c == "-") {
+      console.log(a - b);
+    }
+    if (c == "*") {
+      console.log(a * b);
+    }
+    if (c == "/") {
+      console.log(a / b);
+    }
+  }
+</script>
 
-<script id="ch0104/20"></script>
+<script id="ch0104/20">
+  var a = Number(prompt("a:", ""));
+  var b = Number(prompt("b:", ""));
+  var c = Number(prompt("c:", ""));
+  var d = b * b - 4 * a * c;
+  if (d == 0) {
+    var x = (-b + Math.sqrt(d)) / (2 * a);
+    console.log("x1=x2=" + x);
+  } else if (d > 0) {
+    var x1 = (-b + Math.sqrt(d)) / (2 * a);
+    var x2 = (-b - Math.sqrt(d)) / (2 * a);
+    console.log("x1=" + x1 + ";x2=" + x2 + "，其中x1>x2。");
+  } else {
+    console.log(
+      "x1=" +
+        (-b / (2 * a)).toFixed(5) +
+        "+" +
+        (Math.sqrt(-d) / (2 * a)).toFixed(5) +
+        "i; x2=" +
+        (-b / (2 * a)).toFixed(5) +
+        "-" +
+        (Math.sqrt(-d) / (2 * a)).toFixed(5) +
+        "i"
+    );
+  }
+</script>
 
 <script id="ch0104/21"></script>
 
