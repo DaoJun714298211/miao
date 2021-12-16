@@ -410,13 +410,56 @@
   console.log(n - Math.ceil(y / x));
 </script>
 
-<script id="ch0105/01"></script>
+<script id="ch0105/01">
+  var n = Number(prompt());
+  var ageSum = 0;
+  var counter = 0;
+  while (counter < n) {
+    var age = Number(prompt(n));
+    ageSum = ageSum + age;
+    counter = counter + 1;
+  }
 
-<script id="ch0105/02"></script>
+  console.log((ageSum / n).toFixed(2));
+</script>
 
-<script id="ch0105/03"></script>
+<script id="ch0105/02">
+  var m = 0;
+  var moneySum = 0;
+  while (m < 12) {
+    var money = Number(prompt(money));
+    moneySum = moneySum + money;
+    m = m + 1;
+  }
 
-<script id="ch0105/04"></script>
+  console.log("$" + (moneySum / 12).toFixed(2));
+</script>
+
+<script id="ch0105/03">
+  var n = Number(prompt());
+  var Sum = 0;
+  var counter = 0;
+  while (counter < n) {
+    var m = Number(prompt(n));
+    Sum = Sum + m;
+    counter = counter + 1;
+  }
+
+  console.log((Sum / n).toFixed(4));
+</script>
+
+<script id="ch0105/04">
+  var n = Number(prompt());
+  var Sum = 0;
+  var counter = 0;
+  while (counter < n) {
+    var m = Number(prompt(n));
+    Sum = Sum + m;
+    counter = counter + 1;
+  }
+
+  console.log(Sum, (Sum / n).toFixed(5));
+</script>
 
 <script id="ch0105/05"></script>
 
