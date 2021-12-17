@@ -414,6 +414,7 @@
   var n = Number(prompt());
   var ageSum = 0;
   var counter = 0;
+
   while (counter < n) {
     var age = Number(prompt(n));
     ageSum = ageSum + age;
@@ -426,6 +427,7 @@
 <script id="ch0105/02">
   var m = 0;
   var moneySum = 0;
+
   while (m < 12) {
     var money = Number(prompt(money));
     moneySum = moneySum + money;
@@ -439,6 +441,7 @@
   var n = Number(prompt());
   var Sum = 0;
   var counter = 0;
+
   while (counter < n) {
     var m = Number(prompt(n));
     Sum = Sum + m;
@@ -452,6 +455,7 @@
   var n = Number(prompt());
   var Sum = 0;
   var counter = 0;
+
   while (counter < n) {
     var m = Number(prompt(n));
     Sum = Sum + m;
@@ -461,13 +465,75 @@
   console.log(Sum, (Sum / n).toFixed(5));
 </script>
 
-<script id="ch0105/05"></script>
+<script id="ch0105/05">
+  var n = Number(prompt());
+  var result = 0;
+  var c = 0;
 
-<script id="ch0105/06"></script>
+  while (c < n) {
+    var fraction = Number(prompt());
+    if (result <= fraction) {
+      result = fraction;
+    }
+    c = c + 1;
+  }
 
-<script id="ch0105/07"></script>
+  console.log(result);
+</script>
 
-<script id="ch0105/08"></script>
+<script id="ch0105/06">
+  var n = Number(prompt());
+  var c = 0;
+  var max = -Infinity;
+  var min = Infinity;
+
+  while (c < n) {
+    var d = Number(prompt());
+    if (max <= d) {
+      max = d;
+    }
+    if (min > d) {
+      min = d;
+    }
+    c = c + 1;
+  }
+
+  console.log(max - min);
+</script>
+
+<script id="ch0105/07">
+  var n = Number(prompt());
+  var AuSum = 0;
+  var AgSum = 0;
+  var CuSum = 0;
+  var c = 0;
+
+  while (c < n) {
+    var Au = Number(prompt());
+    var Ag = Number(prompt());
+    var Cu = Number(prompt());
+    AuSum = AuSum + Au;
+    AgSum = AgSum + Ag;
+    CuSum = CuSum + Cu;
+    c = c + 1;
+  }
+
+  console.log(AuSum, AgSum, CuSum, AuSum + AgSum + CuSum);
+</script>
+
+<script id="ch0105/08">
+  var n = Number(prompt());
+  var c = 0;
+  var angle = 0;
+
+  while (c < n - 1) {
+    var a = Number(prompt());
+    angle = angle + a;
+    c = c + 1;
+  }
+
+  console.log((n - 2) * 180 - angle);
+</script>
 
 <script id="ch0105/09"></script>
 
