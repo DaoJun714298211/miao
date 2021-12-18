@@ -676,9 +676,45 @@
   console.log(a);
 </script>
 
-<script id="ch0105/18"></script>
+<script id="ch0105/18">
+  var n = Number(prompt());
+  var a = Number(prompt());
+  var b = Number(prompt());
+  var x = b / a;
+  var y;
+  var c = 0;
 
-<script id="ch0105/19"></script>
+  while (c < n - 1) {
+    var a_new = Number(prompt());
+    var b_new = Number(prompt());
+    y = b_new / a_new;
+    if (y - x > 0.05) {
+      console.log("better");
+    } else if (x - y < 0.05) {
+      console.log("worse");
+    } else {
+      console.log("same");
+    }
+    c = c + 1;
+  }
+</script>
+
+<script id="ch0105/19">
+  var n = Number(prompt());
+  var c = 0;
+  var time = 0;
+
+  while (c < n) {
+    var x = Number(prompt());
+    var y = Number(prompt());
+    var p = Number(prompt());
+    var t = p * (1 + 0.5) + (Math.sqrt(x * x + y * y) / 50) * 2;
+    time = t + time;
+    c = c + 1;
+  }
+
+  console.log(Math.ceil(time));
+</script>
 
 <script id="ch0105/20"></script>
 
