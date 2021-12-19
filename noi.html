@@ -716,9 +716,37 @@
   console.log(Math.ceil(time));
 </script>
 
-<script id="ch0105/20"></script>
+<script id="ch0105/20">
+  var h = Number(prompt());
+  var c = 1;
+  var Sum = h;
 
-<script id="ch0105/21"></script>
+  while (c < 10) {
+    h = h / 2;
+    Sum = Sum + 2 * h;
+    c = c + 1;
+  }
+
+  console.log(Sum.toPrecision(6), (h / 2).toPrecision(6));
+</script>
+
+<script id="ch0105/21">
+  var N = Number(prompt());
+
+  while (N != 1) {
+    if (N % 2 != 0) {
+      var n = N * 3 + 1;
+      console.log(N + "*3+1=" + n);
+      N = n;
+    } else {
+      var n = N / 2;
+      console.log(N + "/2=" + n);
+      N = n;
+    }
+  }
+
+  console.log("End");
+</script>
 
 <script id="ch0105/22"></script>
 
