@@ -681,13 +681,12 @@
   var a = Number(prompt());
   var b = Number(prompt());
   var x = b / a;
-  var y;
   var c = 0;
 
   while (c < n - 1) {
     var a_new = Number(prompt());
     var b_new = Number(prompt());
-    y = b_new / a_new;
+    var y = b_new / a_new;
     if (y - x > 0.05) {
       console.log("better");
     } else if (x - y > 0.05) {
@@ -737,18 +736,39 @@
     if (N % 2 != 0) {
       var n = N * 3 + 1;
       console.log(N + "*3+1=" + n);
-      N = n;
     } else {
       var n = N / 2;
       console.log(N + "/2=" + n);
-      N = n;
     }
+    N = n;
   }
 
   console.log("End");
 </script>
 
-<script id="ch0105/22"></script>
+<script id="ch0105/22">
+  var handmoney = 0;
+  var cmoney;
+
+  for (c = 1; c <= 12; c++) {
+    handmoney += 300;
+    var spent = Number(prompt());
+    handmoney -= spent;
+    if (spent > handmoney) {
+      console.log(-c);
+      break;
+    }
+    if (handmoney >= 100) {
+      cmoney += handmoney - (handmoney % 100);
+      handmoney = handmoney % 100;
+    }
+  }
+
+  if (c < 13) {
+    handmoney += spent * 1.2;
+    console.log(handmoney);
+  }
+</script>
 
 <script id="ch0105/23"></script>
 
