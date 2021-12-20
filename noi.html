@@ -750,7 +750,7 @@
   var handmoney = 0;
   var cmoney;
 
-  for (c = 1; c <= 12; c++) {
+  for (var c = 1; c < 13; c++) {
     handmoney += 300;
     var spent = Number(prompt());
     handmoney -= spent;
@@ -764,21 +764,65 @@
     }
   }
 
-  if (c < 13) {
+  if (c == 13) {
     handmoney += spent * 1.2;
     console.log(handmoney);
   }
 </script>
 
-<script id="ch0105/23"></script>
+<script id="ch0105/23">
+  var n = Number(prompt());
+  var 库存 = Number(prompt());
+  var counter = 0;
 
-<script id="ch0105/24"></script>
+  for (var i = 1; i <= n; i++) {
+    var need = Number(prompt());
+    if (need <= 库存) {
+      库存 -= need;
+    } else {
+      counter++;
+    }
+  }
+</script>
+
+<script id="ch0105/24">
+  var n = Number(prompt());
+  var max = 0;
+  var c = 0;
+
+  for (var i = 0; i < n; i++) {
+    var a = Number(prompt());
+    var b = Number(prompt());
+    if (a >= 90 && a <= 140 && b >= 60 && b <= 90) {
+      c++;
+      if (c > max) {
+        max = c;
+      }
+    } else {
+      c = 0;
+    }
+  }
+
+  console.log(max);
+</script>
 
 <script id="ch0105/25"></script>
 
 <script id="ch0105/26"></script>
 
-<script id="ch0105/27"></script>
+<script id="ch0105/27">
+  var k = Number(prompt());
+  var sum = 0;
+
+  for (var c = 1; ; c++) {
+    sum += 1 / c;
+    if (sum > k) {
+      break;
+    }
+  }
+
+  console.log(c);
+</script>
 
 <script id="ch0105/28"></script>
 
