@@ -848,9 +848,44 @@
 
 <script id="ch0105/39"></script>
 
-<script id="ch0105/40"></script>
+<script id="ch0105/40">
+  var n = Number(prompt());
+  var c = 0;
 
-<script id="ch0105/41"></script>
+  for (var i = 1; i <= n; i++) {
+    var m = i;
+
+    while (m > 0) {
+      var d = m % 10;
+      if (d === 1) {
+        c++;
+      }
+      m = (m - d) / 10;
+    }
+  }
+
+  console.log(c);
+</script>
+
+<script id="ch0105/41">
+  var n = Number(prompt());
+  var p = Number(prompt());
+  var c = 0;
+
+  for (var i = n; i <= p; i++) {
+    var m = i;
+
+    while (m > 0) {
+      var d = m % 10;
+      if (d === 2) {
+        c++;
+      }
+      m = (m - d) / 10;
+    }
+  }
+
+  console.log(c);
+</script>
 
 <script id="ch0105/42"></script>
 
