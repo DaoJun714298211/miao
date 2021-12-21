@@ -936,8 +936,9 @@
       }
       isFirst = false;
     }
+  }
 
-    console.log(lights);
+  console.log(lights);
 </script>
 
 <script id="ch0105/32">
@@ -948,9 +949,8 @@
 
   for (var i = 0; i < n; i++) {
     sum += q / p;
-    var m = q + p;
-    p = q;
-    q = m;
+    q = q + p;
+    p = q - p;
   }
 
   console.log(sum.toFixed(4));
