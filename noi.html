@@ -881,7 +881,6 @@
   do {
     var m = N % 10;
     result = result * 10 + m;
-    console.log(m);
     N = (N - m) / 10;
   } while (N > 0);
 
@@ -892,7 +891,29 @@
   }
 </script>
 
-<script id="ch0105/30"></script>
+<script id="ch0105/30">
+  var m = Number(prompt());
+  var k = Number(prompt());
+  var c = 0;
+  var n;
+
+  if (m % 19 == 0) {
+    while (m != 0) {
+      n = m % 10;
+      if (n == 3) {
+        c++;
+      }
+      m = (m - n) / 10;
+    }
+    if (c == k) {
+      console.log("YES");
+    } else {
+      console.log("NO");
+    }
+  } else {
+    console.log("NO");
+  }
+</script>
 
 <script id="ch0105/31"></script>
 
