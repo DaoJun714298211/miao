@@ -876,16 +876,17 @@
     isNegative = true;
   }
 
-  var result = "";
+  var result = 0;
 
   do {
     var m = N % 10;
-    result = result + m;
+    result = result * 10 + m;
     console.log(m);
     N = (N - m) / 10;
   } while (N > 0);
+
   if (isNegative) {
-    console.log("-" + result);
+    console.log(-result);
   } else {
     console.log(result);
   }
