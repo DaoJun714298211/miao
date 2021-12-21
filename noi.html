@@ -956,7 +956,18 @@
   console.log(sum.toFixed(4));
 </script>
 
-<script id="ch0105/33"></script>
+<script id="ch0105/33">
+  var n = Number(prompt());
+  var sum = 0;
+  var sign = 1;
+
+  for (var i = 1; i <= n; i++) {
+    sum += (sign * 1) / i;
+    sign = -sign;
+  }
+
+  console.log(sum.toFixed(4));
+</script>
 
 <script id="ch0105/34"></script>
 
