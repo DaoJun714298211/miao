@@ -844,17 +844,25 @@
 </script>
 
 <script id="ch0105/27">
-  var k = Number(prompt());
+  // var k = Number(prompt());
+  // var Sn = 0;
+
+  // for (var c = 1; ; c++) {
+  //   Sn += 1 / c;
+  //   if (Sn > k) {
+  //     break;
+  //   }
+  // }
+
+  // console.log(c);
+  var K = Number(prompt());
+  var n = 0;
   var Sn = 0;
-
-  for (var c = 1; ; c++) {
-    Sn += 1 / c;
-    if (Sn > k) {
-      break;
-    }
-  }
-
-  console.log(c);
+  do {
+    n = n + 1;
+    Sn = Sn + 1 / n;
+  } while (Sn <= K);
+  console.log(n);
 </script>
 
 <script id="ch0105/28">
