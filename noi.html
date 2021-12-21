@@ -747,42 +747,44 @@
 </script>
 
 <script id="ch0105/22">
-  var handmoney = 0;
-  var cmoney;
+  var money = 300;
+  var all = 0;
+  var save = 0;
+  var hand = 0;
 
-  for (var c = 1; c < 13; c++) {
-    handmoney += 300;
-    var spent = Number(prompt());
-    handmoney -= spent;
-    if (spent > handmoney) {
+  for (var c = 1; c <= 12; c++) {
+    var budget = Number(prompt());
+    save += money - budget;
+    if (save < 0) {
       console.log(-c);
       break;
-    }
-    if (handmoney >= 100) {
-      cmoney += handmoney - (handmoney % 100);
-      handmoney = handmoney % 100;
+    } else {
+      hand = 100 * Math.trunc(save / 100);
+      save -= hand;
+      all += hand;
     }
   }
 
   if (c == 13) {
-    handmoney += spent * 1.2;
-    console.log(handmoney);
+    console.log(save + all * 1.2);
   }
 </script>
 
 <script id="ch0105/23">
-  var n = Number(prompt());
   var 库存 = Number(prompt());
-  var counter = 0;
+  var n = Number(prompt());
+  var c = 0;
 
   for (var i = 1; i <= n; i++) {
     var need = Number(prompt());
     if (need <= 库存) {
       库存 -= need;
     } else {
-      counter++;
+      c++;
     }
   }
+
+  console.log(c);
 </script>
 
 <script id="ch0105/24">
