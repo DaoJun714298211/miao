@@ -868,24 +868,50 @@
 </script>
 
 <script id="ch0105/29">
+  // var N = Number(prompt());
+  // var isNegative = false;
+
+  // if (N < 0) {
+  //   N = -N;
+  //   isNegative = true;
+  // }
+
+  // var result = 0;
+
+  // do {
+  //   var m = N % 10;
+  //   result = result * 10 + m;
+  //   N = (N - m) / 10;
+  // } while (N > 0);
+
+  // if (isNegative) {
+  //   console.log(-result);
+  // } else {
+  //   console.log(result);
+  // }
   var N = Number(prompt());
-  var isNegative = false;
-
-  if (N < 0) {
-    N = -N;
-    isNegative = true;
-  }
-
+  var x;
+  var n; //中间数
   var result = 0;
-
-  do {
-    var m = N % 10;
-    result = result * 10 + m;
-    N = (N - m) / 10;
-  } while (N > 0);
-
-  if (isNegative) {
-    console.log(-result);
+  var positive = 1;
+  if (N < 0) {
+    positive = 0;
+    N = -N;
+    //console.log('-')
+  }
+  if (N == 0) {
+    console.log(N);
+  }
+  n = N;
+  while (N > 0) {
+    x = N % 10;
+    if (x != 0 || N < n) {
+      result = result * 10 + x;
+    }
+    N = (N - x) / 10;
+  }
+  if (positive == 0) {
+    console.log("-" + result);
   } else {
     console.log(result);
   }
