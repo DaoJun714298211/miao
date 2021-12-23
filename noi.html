@@ -1118,10 +1118,83 @@
   console.log(c);
 </script>
 
-<script id="ch0105/42"></script>
+<script id="ch0105/42">
+  var h = Number(prompt());
+  var w = Number(prompt());
+  var char = prompt();
+  var o = Number(prompt());
+  var str = "";
 
-<script id="ch0105/43"></script>
+  for (var i = 0; i < h; i++) {
+    for (var j = 0; j < w; j++) {
+      if (i == 0 || j == 0 || i == h - 1 || j == w - 1) {
+        str += char;
+      } else {
+        if (o) {
+          str += char;
+        } else {
+          str += " ";
+        }
+      }
+    }
+    if (i < h - 1) {
+      str += "\n";
+    }
+  }
 
-<script id="ch0105/44"></script>
+  console.log(str);
+</script>
 
-<script id="ch0105/45"></script>
+<script id="ch0105/43">
+  var n = Number(prompt());
+
+  for (var i = 2; ; i++) {
+    if (n % i == 0) {
+      console.log(n / i);
+      break;
+    }
+  }
+</script>
+
+<script id="ch0105/44">
+  var n = Number(prompt());
+  var counter = 0;
+
+  for (var i = 2; ; i++) {
+    var iIsPrime = true;
+    for (var j = 2; j <= i / 2; j++) {
+      if (i % j == 0) {
+        iIsPrime = false;
+        break;
+      }
+    }
+
+    if (iIsPrime) {
+      counter++;
+      if (counter == n) {
+        console.log(i);
+        break;
+      }
+    }
+  }
+</script>
+
+<script id="ch0105/45">
+  var n = Number(prompt());
+  var sum = 0;
+  var money = 1;
+  var day = 1;
+  var mday = 0;
+
+  for (var i = 1; i <= n; i++) {
+    sum += money;
+    mday++;
+    if (mday == day) {
+      money++;
+      day++;
+      mday = 0;
+    }
+  }
+
+  console.log(sum);
+</script>
