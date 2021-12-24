@@ -1230,7 +1230,23 @@
   }
 </script>
 
-<script id="narcissistics"></script>
+<script id="narcissistics">
+  function cube(n) {
+    var sum = 0;
+    for (; n != 0; ) {
+      var m = n % 10;
+      sum += m * m * m;
+      n = (n - m) / 10;
+    }
+    return sum;
+  }
+
+  var n = Number(prompt());
+
+  if (cube(n) == n) {
+    console.log(n);
+  }
+</script>
 
 <script id="palindrom"></script>
 
