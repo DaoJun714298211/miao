@@ -1198,3 +1198,54 @@
 
   console.log(sum);
 </script>
+
+<script id="narcissistic">
+  // var n = Number(prompt());
+  // var a = n % 10;
+  // var b = ((n - a) / 10) % 10;
+  // var c = ((n - a - b * 10) / 10 / 10) % 10;
+
+  // if (a * a * a + b * b * b + c * c * c == n) {
+  //   console.log("YES");
+  // } else {
+  //   console.log("NO");
+  // }
+
+  function cube(n) {
+    var sum = 0;
+    for (; n != 0; ) {
+      var m = n % 10;
+      sum += m * m * m;
+      n = (n - m) / 10;
+    }
+    return sum;
+  }
+
+  var n = Number(prompt());
+
+  if (cube(n) == n) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+</script>
+
+<script id="narcissistics"></script>
+
+<script id="palindrom"></script>
+
+<script id="weekday"></script>
+
+<script id="complete-number"></script>
+
+<script id="complete-numbers"></script>
+
+<script id="prime"></script>
+
+<script id="primes"></script>
+
+<script id="itob"></script>
+
+<script id="lcf&lcm"></script>
+
+<script id="sqrt"></script>
