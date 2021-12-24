@@ -1248,7 +1248,41 @@
   }
 </script>
 
-<script id="palindrom"></script>
+<script id="palindrom">
+  var n = Number(prompt());
+  var counter = 1;
+  var flag = true;
+
+  if (n == 0) {
+    flag = true;
+  } else {
+    for (var N = n; N != 0; ) {
+      var m = N % 10;
+      N = (N - m) / 10;
+      if (N != 0) {
+        counter *= 10;
+      }
+    }
+    for (; counter >= 1; ) {
+      var x = n % 10;
+      var y = Math.trunc(n / counter);
+      if (x == y) {
+        n = (n - x) / 10 - y * (counter / 10);
+        counter /= 100;
+        flag = true;
+      } else {
+        flag = false;
+        break;
+      }
+    }
+  }
+
+  if (flag) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+</script>
 
 <script id="weekday"></script>
 
