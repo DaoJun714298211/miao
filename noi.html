@@ -1211,7 +1211,7 @@
   //   console.log("NO");
   // }
 
-  function cube(n) {
+  function 水仙花数(n) {
     var sum = 0;
     for (; n != 0; ) {
       var m = n % 10;
@@ -1223,7 +1223,7 @@
 
   var n = Number(prompt());
 
-  if (cube(n) == n) {
+  if (水仙花数(n) == n) {
     console.log("YES");
   } else {
     console.log("NO");
@@ -1231,7 +1231,7 @@
 </script>
 
 <script id="narcissistics">
-  function cube(n) {
+  function 水仙花数(n) {
     var sum = 0;
     for (; n != 0; ) {
       var m = n % 10;
@@ -1242,7 +1242,7 @@
   }
 
   for (var n = 100; n < 1000; n++) {
-    if (cube(n) == n) {
+    if (水仙花数(n) == n) {
       console.log(n);
     }
   }
@@ -1259,13 +1259,16 @@
     for (var N = n; N != 0; ) {
       var m = N % 10;
       N = (N - m) / 10;
+
       if (N != 0) {
         counter *= 10;
       }
     }
+
     for (; counter >= 1; ) {
       var x = n % 10;
       var y = Math.trunc(n / counter);
+
       if (x == y) {
         n = (n - x) / 10 - y * (counter / 10);
         counter /= 100;
@@ -1282,20 +1285,200 @@
   } else {
     console.log("NO");
   }
+
+  // function 回文数(n) {
+  //   var width = digitwidth(n);
+
+  //   for (var i = 1; i <= width / 2; i++) {
+  //     // 取出右数第i位
+  //     var 右 = Math.trunc(n / Math.pow(10, i - 1)) % 10;
+  //     // 取出左数第i位
+  //     var 左 = Math.trunc(n / Math.pow(10, width - i)) % 10;
+
+  //     if (右 != 左) {
+  //       return false;
+  //     }
+  //   }
+
+  //   return true;
+  // }
 </script>
 
-<script id="weekday"></script>
+<script id="weekday">
+  var year = Number(prompt());
+  var month = Number(prompt());
+  var sum = 0;
+  var leap = true; //瑞年
+  for (var i = 1; i < year; i++) {
+    if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
+      sum = sum + 366;
+    } else {
+      sum = sum + 365;
+    }
+  }
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    leap = true;
+  } else leap = false;
+  for (var j = 1; j < month; j++) {
+    if (
+      j == 1 ||
+      j == 3 ||
+      j == 5 ||
+      j == 7 ||
+      j == 8 ||
+      j == 10 ||
+      month == 12
+    ) {
+      sum = sum + 31;
+    }
+    if (j == 4 || j == 6 || j == 9 || j == 11) {
+      sum = sum + 30;
+    }
+    if (j == 2 && leap == true) {
+      sum = sum + 29;
+    } else if (j == 2 && leap == false) {
+      sum = sum + 28;
+    }
+  }
+  var weekday = (sum + 1) % 7;
+  console.log(weekday);
+</script>
 
-<script id="complete-number"></script>
+<script id="complete-number">
+  var n = Number(prompt());
+  var sum = 0;
 
-<script id="complete-numbers"></script>
+  for (var i = 1; i <= n / 2; i++) {
+    if (n % i == 0) {
+      sum += i;
+    }
+  }
 
-<script id="prime"></script>
+  if ((sum = n)) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+</script>
 
-<script id="primes"></script>
+<script id="complete-numbers">
+  for (var i = 1; i <= 1000; i++) {
+    var sum = 0;
+    for (var j = 1; j <= i / 2; j++) {
+      if (i % j == 0) {
+        sum = sum + j;
+      }
+    }
+    if (sum == i) {
+      console.log(i);
+    }
+  }
+</script>
 
-<script id="itob"></script>
+<script id="prime">
+  var n = Number(prompt());
+  var prime = false;
 
-<script id="lcf&lcm"></script>
+  if (n == 1) {
+    prime = false;
+  }
 
-<script id="sqrt"></script>
+  if (n == 2 || n == 3) {
+    prime = true;
+  }
+
+  for (var i = 2; i * i <= n; i++) {
+    if (n % i == 0) {
+      prime = false;
+      break;
+    } else {
+      prime = true;
+    }
+  }
+
+  if (prime == true) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
+</script>
+
+<script id="primes">
+  for (var j = 2; j <= 100; j++) {
+    var prime = true; //默认是true
+    for (var i = 2; i * i <= j; i++) {
+      if (j % i == 0) {
+        prime = false;
+        break; //一定要及时break 否则会继续循环，后面又会改回true了
+      }
+    }
+    if (prime == true) {
+      console.log(j);
+    }
+  }
+</script>
+
+<script id="itob">
+  var n = Number(prompt());
+  var plus_minus = true;
+  var s = "";
+
+  if (n < 0) {
+    plus_minus = false;
+    n = -n;
+  }
+
+  var N = n;
+
+  for (var i = 1; N != 0; ) {
+    var a = N % 10;
+    N = (N - a) / 10;
+    if (N != 0) {
+      i = i * 10;
+    }
+  }
+
+  var m = n;
+
+  for (; i >= 1; ) {
+    s = s + Math.trunc(m / i);
+    m = m - Math.trunc(m / i) * i;
+    i = i / 10;
+  }
+
+  if (plus_minus == false) {
+    console.log("-" + s);
+  } else {
+    console.log(s);
+  }
+</script>
+
+<script id="lcf&lcm">
+  var x = Number(prompt());
+  var y = Number(prompt());
+  if (x > y) {
+    y = x + y;
+    x = y - x;
+    y = y - x; //交换顺序
+  }
+  for (var i = x; i >= 1; i--) {
+    if (x % i == 0 && y % i == 0) {
+      console.log(i);
+      break;
+    }
+  }
+  for (var j = y; j <= x * y; j++) {
+    if (j % y == 0 && j % x == 0) {
+      console.log(j);
+      break;
+    }
+  }
+</script>
+
+<script id="sqrt">
+  var n = Number(prompt());
+  for (var i = (n + 1) / 2; i * i > n; i -= 0.0001) {
+    //n=4时，输出不对，结果时1.999不是2.000,所以必须减0.0001而不是0.001，防止减多了
+  }
+  console.log(i.toFixed(3));
+</script>
