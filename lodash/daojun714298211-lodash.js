@@ -13,8 +13,7 @@ var daojun714298211 = {
         temp = [];
         count = 0;
       }
-
-      return res;
     }
+    return res;
   },
 };
