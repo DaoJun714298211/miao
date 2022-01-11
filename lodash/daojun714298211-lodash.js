@@ -15,5 +15,9 @@ var daojun714298211 = {
       }
     }
     return res;
-  },
+  }
+
+  compact: function compact(array) {
+
+  }
 };
