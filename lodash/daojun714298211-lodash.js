@@ -18,6 +18,16 @@ var daojun714298211 = {
   }
 
   compact: function compact(array) {
+    var res = []
 
+    for (var i = 0; i < array.length; i++){
+      var c = array[i]
+
+      if (!c || c !== c) {
+        continue
+      }
+      res.push = array[i]
+    }
+    return res
   }
 };
