@@ -15,19 +15,19 @@ var daojun714298211 = {
       }
     }
     return res;
-  }
+  },
 
   compact: function compact(array) {
-    var res = []
+    var res = [];
 
-    for (var i = 0; i < array.length; i++){
-      var c = array[i]
+    for (var i = 0; i < array.length; i++) {
+      var c = array[i];
 
       if (!c || c !== c) {
-        continue
+        continue;
       }
-      res.push = array[i]
+      res.push = array[i];
     }
-    return res
-  }
+    return res;
+  },
 };
