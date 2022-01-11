@@ -1,8 +1,8 @@
-var daojun714298211 = {
+var jk378 = {
   chunk: function chunk(array, size = 1) {
     var res = [];
-    var temp = [];
     var count = 0;
+    var temp = [];
 
     for (var i = 0; i < array.length; i++) {
       temp.push(array[i]);
@@ -21,12 +21,12 @@ var daojun714298211 = {
     var res = [];
 
     for (var i = 0; i < array.length; i++) {
-      var c = array[i];
+      var t = array[i];
 
-      if (!c || c !== c) {
+      if (!t || t !== t) {
         continue;
       }
-      res.push(c);
+      res.push(t);
     }
     return res;
   },
