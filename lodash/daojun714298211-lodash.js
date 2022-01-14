@@ -60,18 +60,6 @@ var daojun714298211 = {
 
     return res;
   },
-
-  dropRightWhile: function dropRightWhile(array,predicate=_.identity) {
-
-  }
-
-  dropWhile: function dropWhile(array,predicate=_.identity) {
-
-  }
-
-  fill: function fill(array, value, start = 0, end = array.length) {
-
-  }
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
