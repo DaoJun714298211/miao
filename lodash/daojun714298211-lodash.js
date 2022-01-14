@@ -77,13 +77,27 @@ var daojun714298211 = {
         for (var j = 0; j < array[i].length; j++) {
           res.push(array[i][j]);
         }
-      } else res.push(array[i]);
+      } else {
+        res.push(array[i]);
+      }
     }
 
     return res;
   },
 
-  flattenDeep: function flattenDeep(array) {},
+  flattenDeep: function flattenDeep(array) {
+    var res = [];
+
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        res.push(...this.flattenDeep(array[i]));
+      } else {
+        res.push(array[i]);
+      }
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
