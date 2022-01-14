@@ -44,7 +44,18 @@ var daojun714298211 = {
     return res;
   },
 
-  dropRight: function drop(array, n = 1) {},
+  dropRight: function drop(array, n = 1) {
+    if (n > array.length) {
+      return [];
+    }
+
+    var res = [];
+
+    for (var i = 0; i < array.length - n; i++) {
+      array.push(array[i]);
+    }
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
