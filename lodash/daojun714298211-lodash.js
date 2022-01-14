@@ -82,6 +82,8 @@ var daojun714298211 = {
 
     return res;
   },
+
+  flattenDeep: function flattenDeep(array) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
