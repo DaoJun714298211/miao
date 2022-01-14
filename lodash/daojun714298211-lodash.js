@@ -14,6 +14,7 @@ var daojun714298211 = {
         count = 0;
       }
     }
+
     return res;
   },
 
@@ -28,6 +29,7 @@ var daojun714298211 = {
       }
       res.push(c);
     }
+
     return res;
   },
 
@@ -41,10 +43,11 @@ var daojun714298211 = {
     for (var i = n; i < array.length; i++) {
       res.push(array[i]);
     }
+
     return res;
   },
 
-  dropRight: function drop(array, n = 1) {
+  dropRight: function dropRight(array, n = 1) {
     if (n > array.length) {
       return [];
     }
@@ -52,10 +55,23 @@ var daojun714298211 = {
     var res = [];
 
     for (var i = 0; i < array.length - n; i++) {
-      array.push(array[i]);
+      res.push(array[i]);
     }
+
     return res;
   },
+
+  dropRightWhile: function dropRightWhile(array,predicate=_.identity) {
+
+  }
+
+  dropWhile: function dropWhile(array,predicate=_.identity) {
+
+  }
+
+  fill: function fill(array, value, start = 0, end = array.length) {
+
+  }
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
