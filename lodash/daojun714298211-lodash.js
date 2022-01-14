@@ -31,7 +31,20 @@ var daojun714298211 = {
     return res;
   },
 
-  drop: function drop(array, n = 1) {},
+  drop: function drop(array, n = 1) {
+    var res = [];
+
+    if (n >= array.length) {
+      return res;
+    }
+
+    for (var i = n; i < array.length; i++) {
+      res.push(array[i]);
+    }
+    return res;
+  },
+
+  dropRight: function drop(array, n = 1) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
@@ -41,7 +54,6 @@ var daojun714298211 = {
 // uniq,uniqBy,without
 // zip,countBy,every,filter,find,forEach,groupBy,keyBy,map
 // partition,reduce,reduceRight,reject,sample,shuffle,size,some
-
 // isBoolean,isEmpty,isEqual,
 // isNaN,isNil,isNull,isNumber,
 // toArray
