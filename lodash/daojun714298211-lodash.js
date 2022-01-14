@@ -68,16 +68,27 @@ var daojun714298211 = {
 
     return array;
   },
+
+  flatten: function flatten(array) {
+    var res = [];
+
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        for (var j = 0; j < array[i].length; j++) {
+          res.push(array[i][j]);
+        }
+      } else res.push(array[i]);
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
-// fill,findIndex,findLastIndex
-// flatten,flattenDeep,flattenDepth
+// fill,findIndex,findLastIndex,flatten,flattenDeep,flattenDepth
 // fromPairs,head,indexOf,initial,join,last,lastIndexOf,reverse
 // uniq,uniqBy,without
 // zip,countBy,every,filter,find,forEach,groupBy,keyBy,map
 // partition,reduce,reduceRight,reject,sample,shuffle,size,some
-// isBoolean,isEmpty,isEqual,
-// isNaN,isNil,isNull,isNumber,
-// toArray
-// ceil,max,maxBy,sumBy,sum,repeat,range,cloneDeep,
+// isBoolean,isEmpty,isEqual,isNaN,isNil,isNull,isNumber,
+// toArray,ceil,max,maxBy,sumBy,sum,repeat,range,cloneDeep,
