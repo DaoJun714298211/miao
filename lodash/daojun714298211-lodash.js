@@ -89,10 +89,10 @@ var daojun714298211 = {
     var res = [];
 
     for (var i = 0; i < array.length; i++) {
-      if (!Array.isArray(array[i])) {
-        res.push(array[i]);
+      if (Array.isArray(array[i])) {
+        res.push(...this.flattenDeep(array[i]));
       } else {
-        flattenDeep(array[i], res);
+        res.push(array[i]);
       }
     }
 
