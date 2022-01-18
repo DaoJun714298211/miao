@@ -100,7 +100,21 @@ var daojun714298211 = {
   },
 
   flattenDepth: function flattenDepth(array, depth = 1) {
+    if (depth == 0) {
+      return [...array];
+    }
+
     var res = [];
+
+    for (var i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        res.push(...this.flattenDepth(array[i], depth - 1));
+      } else {
+        res.push(array[i]);
+      }
+    }
+
+    return res;
   },
 };
 
