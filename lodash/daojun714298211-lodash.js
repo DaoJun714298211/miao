@@ -116,6 +116,16 @@ var daojun714298211 = {
 
     return res;
   },
+
+  fromPairs: function fromPairs(pairs) {
+    var res = {};
+
+    for (var i = 0; i < pairs.length; i++) {
+      res[pairs[i][0]] = pairs[i][1];
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
