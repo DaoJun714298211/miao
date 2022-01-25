@@ -127,7 +127,19 @@ var daojun714298211 = {
     return res;
   },
 
-  head: function head(array) {},
+  head: function head(array) {
+    return array[0];
+  },
+
+  indexOf: function indexOf(array, value, fromIndex = 0) {
+    for (var i = fromIndex; i < array.length; i++) {
+      if (array[i] == value) {
+        return i;
+      }
+    }
+
+    return -1;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
