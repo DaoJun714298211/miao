@@ -168,20 +168,24 @@ var daojun714298211 = {
   },
 
   last: function last(array) {
-    return array[array.length-1]
-  }
+    return array[array.length - 1];
+  },
 
-  lastIndexOf: function lastIndexOf(array, value, fromIndex = array.length - 1) {
+  lastIndexOf: function lastIndexOf(
+    array,
+    value,
+    fromIndex = array.length - 1
+  ) {
     for (var i = fromIndex; i >= 0; i--) {
-      if (array[i] == value) return i
+      if (array[i] == value) {
+        return i;
+      }
     }
 
     return -1;
-  }
+  },
 
-  reverse: function reverse(array) {
-
-  }
+  reverse: function reverse(array) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
