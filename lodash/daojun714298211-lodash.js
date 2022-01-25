@@ -161,7 +161,7 @@ var daojun714298211 = {
     var res = "" + array[0];
 
     for (var i = 1; i < array.length; i++) {
-      res += separator + array[i];
+      res = res + separator + array[i];
     }
 
     return res;
@@ -171,7 +171,7 @@ var daojun714298211 = {
     return array[array.length - 1];
   },
 
-  lastIndexOf: function lastIndexOf(array, value) {
+  lastIndexOf: (array, value, fromIndex = array.length - 1)  {
     for (var i = fromIndex; i >= 0; i--) {
       if (array[i] == value) {
         return i;
@@ -190,6 +190,8 @@ var daojun714298211 = {
 
     return res;
   },
+
+  uniq: function uniq(array) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
