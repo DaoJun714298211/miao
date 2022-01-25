@@ -144,6 +144,28 @@ var daojun714298211 = {
 
     return -1;
   },
+
+  initial: function inital(array) {
+    var res = [];
+
+    for (var i = 0; i < array.length - 1; i++) {
+      res.push(array[i]);
+    }
+
+    return res;
+  },
+
+  join: function join(array, separator = ",") {
+    if (array.length == 0) return "";
+
+    var res = "" + [0];
+
+    for (var i = 1; i < array.length; i++) {
+      res += separator + array[i];
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
