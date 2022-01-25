@@ -126,6 +126,8 @@ var daojun714298211 = {
 
     return res;
   },
+
+  head: function head(array) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
