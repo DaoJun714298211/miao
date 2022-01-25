@@ -132,6 +132,10 @@ var daojun714298211 = {
   },
 
   indexOf: function indexOf(array, value, fromIndex = 0) {
+    if (fromIndex < 0) {
+      fromIndex += array.length;
+    }
+
     for (var i = fromIndex; i < array.length; i++) {
       if (array[i] == value) {
         return i;
