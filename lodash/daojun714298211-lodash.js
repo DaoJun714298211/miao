@@ -181,7 +181,15 @@ var daojun714298211 = {
     return -1;
   },
 
-  reverse: function reverse(array) {},
+  reverse: function reverse(array) {
+    var res = [];
+
+    for (var i = array.length - 1; i >= 0; i--) {
+      res.push(array[i]);
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
