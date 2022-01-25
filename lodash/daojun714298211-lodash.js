@@ -172,6 +172,14 @@ var daojun714298211 = {
   }
 
   lastIndexOf: function lastIndexOf(array, value, fromIndex = array.length - 1) {
+    for (var i = fromIndex; i >= 0; i--) {
+      if (array[i] == value) return i
+    }
+
+    return -1;
+  }
+
+  reverse: function reverse(array) {
 
   }
 };
