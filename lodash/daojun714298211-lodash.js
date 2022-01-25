@@ -158,7 +158,7 @@ var daojun714298211 = {
   join: function join(array, separator = ",") {
     if (array.length == 0) return "";
 
-    var res = "" + [0];
+    var res = "" + array[0];
 
     for (var i = 1; i < array.length; i++) {
       res += separator + array[i];
