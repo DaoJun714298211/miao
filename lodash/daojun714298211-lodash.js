@@ -338,7 +338,19 @@ var daojun714298211 = {
 
   ceil: function ceil() {},
 
-  max: function max() {},
+  max: function max(array) {
+    if (array.length == 0) {
+      return undefined;
+    }
+
+    var max = array[0];
+
+    for (var i = 1; i < array.length; i++) {
+      max = array[i] > max ? array[i] : max;
+    }
+
+    return max;
+  },
 
   maxBy: function maxBy() {},
 
