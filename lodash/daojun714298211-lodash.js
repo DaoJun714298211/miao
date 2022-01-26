@@ -314,7 +314,27 @@ var daojun714298211 = {
 
   isNumber: function isNumber() {},
 
-  toArray: function toArray() {},
+  toArray: function toArray(value) {
+    if (typeof value == "number" || value != 0) {
+      return [];
+    }
+
+    var res = [];
+
+    if (typeof value == "string" || Array.isArray(value)) {
+      for (var i = 0; i < value.length; i++) {
+        res.push(value[i]);
+      }
+
+      return res;
+    }
+
+    for (var key in value) {
+      res.push(value[key]);
+    }
+
+    return res;
+  },
 
   ceil: function ceil() {},
 
