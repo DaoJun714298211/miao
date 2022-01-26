@@ -222,9 +222,8 @@ var daojun714298211 = {
     for (var j = 0; i < array.length; i++) {
       if (array[j] in map) {
         continue;
-      } else {
-        res.push(array[j]);
       }
+      res.push(array[j]);
     }
 
     return res;
