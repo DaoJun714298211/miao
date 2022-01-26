@@ -295,6 +295,36 @@ var daojun714298211 = {
       return false;
     }
   },
+
+  isEmpty: function isEmpty() {},
+
+  isEqual: function isEqual() {},
+
+  isNaN: function isNaN() {},
+
+  isNil: function isNil() {},
+
+  isNull: function isNull() {},
+
+  isNumber: function isNumber() {},
+
+  toArray: function toArray() {},
+
+  ceil: function ceil() {},
+
+  max: function max() {},
+
+  maxBy: function maxBy() {},
+
+  sumBy: function sumBy() {},
+
+  sum: function sum() {},
+
+  repeat: function repeat() {},
+
+  range: function range() {},
+
+  cloneDeep: function cloneDeep() {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
