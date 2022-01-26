@@ -366,7 +366,15 @@ var daojun714298211 = {
     return sum;
   },
 
-  repeat: function repeat() {},
+  repeat: function repeat(string = "", n = 1) {
+    var res = "";
+
+    for (var i = 0; i < n; i++) {
+      res += string;
+    }
+
+    return res;
+  },
 
   range: function range() {},
 
