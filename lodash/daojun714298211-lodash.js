@@ -236,7 +236,7 @@ var daojun714298211 = {
       res[i] = [];
 
       for (var j = 0; j < arguments.length; j++) {
-        res[i][j] = arguments[i][j];
+        res[i][j] = arguments[j][i];
       }
     }
 
