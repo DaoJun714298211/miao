@@ -61,6 +61,10 @@ var daojun714298211 = {
     return res;
   },
 
+  dropRightWhile: function dropRightWhile() {},
+
+  dropWhile: function dropWhile() {},
+
   fill: function fill(array, value, start = 0, end = array.length) {
     for (var i = start; i < end; i++) {
       array[i] = value;
@@ -68,6 +72,10 @@ var daojun714298211 = {
 
     return array;
   },
+
+  findIndex: function findIndex() {},
+
+  findLastIndex: function findLastIndex() {},
 
   flatten: function flatten(array) {
     var res = [];
@@ -243,7 +251,37 @@ var daojun714298211 = {
     return res;
   },
 
+  countBy: function countBy() {},
+
+  every: function every() {},
+
+  filter: function filter() {},
+
+  find: function find() {},
+
+  forEach: function forEach() {},
+
   groupBy: function groupBy(collection, iteratee) {},
+
+  keyBy: function keyBy() {},
+
+  map: function map() {},
+
+  partition: function partition() {},
+
+  reduce: function reduce() {},
+
+  reduceRight: function reduceRight() {},
+
+  reject: function reject() {},
+
+  sample: function sample() {},
+
+  shuffle: function shuffle() {},
+
+  size: function size() {},
+
+  some: function some() {},
 
   isBoolean: function isBoolean(value) {
     if (
