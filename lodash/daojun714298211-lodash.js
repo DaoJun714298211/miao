@@ -211,7 +211,7 @@ var daojun714298211 = {
     return res;
   },
 
-  without: function without(array, values) {
+  without: function without(array) {
     var res = [];
     var map = {};
 
@@ -229,6 +229,8 @@ var daojun714298211 = {
 
     return res;
   },
+
+  zip: function zip() {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
