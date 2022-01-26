@@ -229,7 +229,19 @@ var daojun714298211 = {
     return res;
   },
 
-  zip: function zip() {},
+  zip: function zip() {
+    var res = [];
+
+    for (var i = 0; i < arguments.length; i++) {
+      res[i] = [];
+
+      for (var j = 0; j < arguments.length; j++) {
+        res[i][j] = arguments[i][j];
+      }
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
