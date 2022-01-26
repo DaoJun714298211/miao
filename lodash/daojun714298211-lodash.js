@@ -244,6 +244,19 @@ var daojun714298211 = {
   },
 
   groupBy: function groupBy(collection, iteratee) {},
+
+  isBoolean: function isBoolean(value) {
+    if (
+      value == true ||
+      value == false ||
+      value == new Boolean(true) ||
+      value == new Boolean(false)
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
