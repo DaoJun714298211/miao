@@ -203,6 +203,7 @@ var daojun714298211 = {
       if (array[i] in map) {
         continue;
       } else {
+        map[array[i]] = 1;
         res.push(array[i]);
       }
     }
