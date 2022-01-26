@@ -210,6 +210,25 @@ var daojun714298211 = {
 
     return res;
   },
+
+  without: function without(array, values) {
+    var res = [];
+    var map = {};
+
+    for (var i = 1; i < arguments.length; i++) {
+      map[arguments[i]] = 1;
+    }
+
+    for (var j = 0; i < array.length; i++) {
+      if (array[j] in map) {
+        continue;
+      } else {
+        res.push(array[j]);
+      }
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
