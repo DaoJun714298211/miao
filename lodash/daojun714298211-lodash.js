@@ -195,7 +195,20 @@ var daojun714298211 = {
     return res;
   },
 
-  uniq: function uniq(array) {},
+  uniq: function uniq(array) {
+    var res = [];
+    var map = {};
+
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] in map) {
+        continue;
+      } else {
+        res.push(array[i]);
+      }
+    }
+
+    return res;
+  },
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
