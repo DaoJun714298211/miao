@@ -232,7 +232,7 @@ var daojun714298211 = {
   zip: function zip() {
     var res = [];
 
-    for (var i = 0; i < arguments.length; i++) {
+    for (var i = 0; i < arguments[0].length; i++) {
       res[i] = [];
 
       for (var j = 0; j < arguments.length; j++) {
@@ -242,6 +242,8 @@ var daojun714298211 = {
 
     return res;
   },
+
+  groupBy: function groupBy(collection, iteratee) {},
 };
 
 // chunk,compact,drop,dropRight,dropRightWhile,dropWhile
