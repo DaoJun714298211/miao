@@ -300,9 +300,15 @@ var daojun714298211 = {
 
   isEqual: function isEqual() {},
 
-  isNaN: function isNaN() {},
+  isNaN: function isNaN(value) {
+    if (value == NaN || value == new Number(NaN)) {
+      return true;
+    } else {
+      return false;
+    }
+  },
 
-  isNil: function isNil() {},
+  isNil: function isNil(value) {},
 
   isNull: function isNull() {},
 
