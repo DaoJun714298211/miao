@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Regex 101</title>
+  </head>
+  <body>
+    <div>REGULAR EXPRESSION</div>
+    <input type="text" id="reInput" />
+    <button onclick="run()">Run</button>
+    <label>g<input type="checkbox" id="reFlagGlobal" /></label>
+    <label>m<input type="checkbox" id="reFlagMultiline" /></label>
+    <label>i<input type="checkbox" id="reFlaginsensitive" /></label>
+    <div>TEST STRING</div>
+    <textarea id="testStringInput" cols="30" rows="5"></textarea>
+
+    <script>
+      //可以用元素的id作为变量名访问到这个元素
+      function run() {
+        var reStr = reInput.value;
+        var flags = getFlags();
+        var re = new RegExp(reStr, flags);
+        console.log(re);
+        var testString = testStringInput.value;
+      }
+
+      function getFlags() {
+        var flags = "";
+        if (reFlagGlobal.checked) {
+          flags += "g";
+        }
+        if (reFlagMultiline.checked) {
+          flags += "m";
+        }
+        if (reFlaginsensitive.checked) {
+          flags += "i";
+        }
+        return flags;
+      }
+    </script>
+  </body>
+</html>

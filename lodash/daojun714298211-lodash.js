@@ -376,7 +376,7 @@ var daojun714298211 = {
     return res;
   },
 
-  range: function range() {},
+  range: function range(start = 0, end, step = 1) {},
 
   cloneDeep: function cloneDeep() {},
 };
