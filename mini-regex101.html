@@ -5,25 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mini Regex 101</title>
+    <style>
+      strong:nth-child(odd) {
+        background-color: #d5ebff;
+      }
+      strong:nth-child(even) {
+        background-color: #9fcfff;
+      }
+    </style>
   </head>
   <body>
     <div>REGULAR EXPRESSION</div>
-    <input type="text" id="reInput" />
-    <button onclick="run()">Run</button>
+    <input type="text" id="reInput" onkeyup="run()" />
+    <!-- <button onclick="run()">Run</button> -->
     <label>g<input type="checkbox" id="reFlagGlobal" /></label>
     <label>m<input type="checkbox" id="reFlagMultiline" /></label>
-    <label>i<input type="checkbox" id="reFlaginsensitive" /></label>
+    <label>i<input type="checkbox" id="reFlagInsensitive" /></label>
+    <label>u<input type="checkbox" id="reFlagUnicode" /></label>
+    <label>s<input type="checkbox" id="reFlagSingleline" /></label>
     <div>TEST STRING</div>
     <textarea id="testStringInput" cols="30" rows="5"></textarea>
-
+    <pre id="resultShow"></pre>
     <script>
       //可以用元素的id作为变量名访问到这个元素
       function run() {
         var reStr = reInput.value;
         var flags = getFlags();
-        var re = new RegExp(reStr, flags);
-        console.log(re);
         var testString = testStringInput.value;
+        if (reStr.length == 0) {
+          resultShow.innerHTML = testString;
+          return;
+        }
+        try {
+          var re = new RegExp(reStr, flags);
+        } catch (e) {
+          if (e instanceof SyntaxError) {
+            resultShow.innerHTML = testString;
+            return;
+          } else {
+            throw e;
+          }
+        }
+
+        var resultHTML = "";
+        var startIdx = 0;
+        var match;
+
+        while ((match = re.exec(testString))) {
+          resultHTML += testString.slice(startIdx, match.index);
+          resultHTML += "<strong>" + match[0] + "</strong>";
+          startIdx = re.lastIndex;
+          if (!re.global) {
+            break;
+          }
+        }
+        resultHTML += testString.slice(startIdx);
+        resultShow.innerHTML = resultHTML;
       }
 
       function getFlags() {
@@ -34,8 +71,14 @@
         if (reFlagMultiline.checked) {
           flags += "m";
         }
-        if (reFlaginsensitive.checked) {
+        if (reFlagInsensitive.checked) {
           flags += "i";
+        }
+        if (reFlagUnicode.checked) {
+          flags += "u";
+        }
+        if (reFlagSingleline.checked) {
+          flags += "s";
         }
         return flags;
       }
